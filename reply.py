@@ -48,14 +48,14 @@ def archive(text):
 
 
 def create_tweet(txt):
-    txt = re.sub("angelysaras gritando a ",'',txt)
-    txt = re.sub("Angelysaras gritando a ",'',txt)
-    txt = re.sub("angel y saras gritando a ",'',txt)
-    txt = re.sub("Angel y saras gritando a ",'',txt)
-    txt = re.sub("angelysaras gritandole a ",'',txt)
-    txt = re.sub("Angelysaras gritandole a ",'',txt)
-    txt = re.sub("angel y saras gritandole a ",'',txt)
-    txt = re.sub("Angel y saras gritandole a ",'',txt)
+    txt = re.sub("donpa rapeando a ",'',txt)
+    txt = re.sub("donpa rapeando a ",'',txt)
+    txt = re.sub("donpa rapeando a ",'',txt)
+    txt = re.sub("donpa rapeando a ",'',txt)
+    txt = re.sub("donpa rapeando a ",'',txt)
+    txt = re.sub("donpa rapeandole a ",'',txt)
+    txt = re.sub("donpa rapeandole a ",'',txt)
+    txt = re.sub("donpa rapeandole a ",'',txt)
     img = imagesearch.image_search(txt)
     if img != False:
         try:
@@ -86,19 +86,19 @@ class ReplyToTweet(tweepy.StreamListener):
             tweetText = tweet.get('text').encode('utf-8')
 
             tweetText = tweetText.decode('ascii',errors='ignore')
-            tweetText = re.sub('@angelysaras_AAA','',tweetText)
-            tweetText = re.sub('@angelysaras_aaa','',tweetText)
-            tweetText = re.sub('@AngelYSaras_AAA','',tweetText)
-            tweetText = re.sub('@AngelYSaras_aaa','',tweetText)
+            tweetText = re.sub('@realguerrerosfc','',tweetText)
+            tweetText = re.sub('@realguerrerosfc','',tweetText)
+            tweetText = re.sub('@realguerrerosfc','',tweetText)
+            tweetText = re.sub('@realguerrerosfc','',tweetText)
             tweetText = re.sub('#','',tweetText)
 
             full_reply = create_tweet(tweetText)
             if full_reply[1] == False:
-                replyText = '@' + screenName + ' ' + "No he podido encontrar " + full_reply[0] + " intenta con otra cosa o algo"
+                replyText = '@' + screenName + ' ' + "No he podido encontrar " + full_reply[0] + " ahhh joputa "
                 api.update_status(status=replyText, in_reply_to_status_id=tweetId)
                 gc.collect()
             else:
-                replyText = '@' + screenName + ' ' + "angelysaras gritando a " + full_reply[0]
+                replyText = '@' + screenName + ' ' + "donpa rapeando a " + full_reply[0]
                 api.update_with_media("output.png",status=replyText, in_reply_to_status_id=tweetId)
                 gc.collect()
 
