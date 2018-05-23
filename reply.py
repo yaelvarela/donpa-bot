@@ -10,13 +10,13 @@ import gc
 from secrets import *
 import imagesearch
 
-auth = tweepy.OAuthHandler(C_KEY,C_SECRET)
-auth.set_access_token(A_TOKEN,A_TOKEN_SECRET)
+auth = tweepy.OAuthHandler(68ZcCgrQUAr12xhKn6OxMRGW2,mtqOk68fdr6OprGf9Oq4bRbQgf32F5uziI1TFFA2y2JFaYn7d7)
+auth.set_access_token(999337147206422528-yDsDWT8LDOZuWRs5g2NuNWRtbSyMEzZ,RIFLLvzgCRrQ4QT5vS1irDxCZpqV57P7k7lRaDUrkY7j5)
 api = tweepy.API(auth)
 
 stream_rule = " "
-account_screen_name = " "
-account_user_id = " "
+account_screen_name = "botdonpa "
+account_user_id = "botdonpa "
 
 def Oimage(image):
     background = Image.open("img/"+image)
@@ -86,15 +86,15 @@ class ReplyToTweet(tweepy.StreamListener):
             tweetText = tweet.get('text').encode('utf-8')
 
             tweetText = tweetText.decode('ascii',errors='ignore')
-            tweetText = re.sub('@realguerrerosfc','',tweetText)
-            tweetText = re.sub('@realguerrerosfc','',tweetText)
-            tweetText = re.sub('@realguerrerosfc','',tweetText)
-            tweetText = re.sub('@realguerrerosfc','',tweetText)
+            tweetText = re.sub('@botdonpa','',tweetText)
+            tweetText = re.sub('@botdonpa','',tweetText)
+            tweetText = re.sub('@botdonpa','',tweetText)
+            tweetText = re.sub('@botdonpa','',tweetText)
             tweetText = re.sub('#','',tweetText)
 
             full_reply = create_tweet(tweetText)
             if full_reply[1] == False:
-                replyText = '@' + screenName + ' ' + "No he podido encontrar " + full_reply[0] + " ahhh joputa "
+                replyText = '@' + screenName + ' ' + "No he podido encontrar " + full_reply[0] + " AHHHHH JOPUTA "
                 api.update_status(status=replyText, in_reply_to_status_id=tweetId)
                 gc.collect()
             else:
