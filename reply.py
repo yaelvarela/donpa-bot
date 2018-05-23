@@ -10,7 +10,7 @@ import gc
 from secrets import *
 import imagesearch
 
-auth = tweepy.OAuthHandler(68ZcCgrQUAr12xhKn6OxMRGW2 ,mtqOk68fdr6OprGf9Oq4bRbQgf32F5uziI1TFFA2y2JFaYn7d7)
+auth = tweepy.OAuthHandler(68ZcCgrQUAr12xhKn6OxMRGW2,mtqOk68fdr6OprGf9Oq4bRbQgf32F5uziI1TFFA2y2JFaYn7d7)
 auth.set_access_token(999337147206422528-yDsDWT8LDOZuWRs5g2NuNWRtbSyMEzZ,RIFLLvzgCRrQ4QT5vS1irDxCZpqV57P7k7lRaDUrkY7j5)
 api = tweepy.API(auth)
 
