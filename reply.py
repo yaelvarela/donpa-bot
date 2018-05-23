@@ -20,7 +20,7 @@ account_user_id = " "
 
 def Oimage(image):
     background = Image.open("img/"+image)
-    foreground = Image.open("img/angelysaras.png")
+    foreground = Image.open("img/donppaaa.png")
     bw = background.size[0]
     bh = background.size[1]
     fw = foreground.size[0]
